@@ -12,7 +12,7 @@ function Play () {
   this.bulletSpeed = 5
   this.stage = null
 
-  this.background = new PIXI.Sprite.from('game/public/scene.png')
+  this.background = new PIXI.Sprite.from('../game/public/scene.png')
   this.background.width = screen.width * 1.2
   this.background.height = screen.height - 50
   this.background.x = screen.width / 2
