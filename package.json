@@ -1,0 +1,38 @@
+{
+  "name": "swamphacks-2021",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "init": "npm install & npm run init_config",
+    "init_config": "echo export default { server_address: 'ws://localhost:3000' } > ./game/config.js",
+    "start": "serve game",
+    "test": "standard"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liamkyoung/swamphacks-2021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/liamkyoung/swamphacks-2021/issues"
+  },
+  "homepage": "https://github.com/liamkyoung/swamphacks-2021#readme",
+  "dependencies": {
+    "pixi.js": "^5.3.7",
+    "sqlite3": "^5.0.1"
+  },
+  "devDependencies": {
+    "serve": "^11.3.2",
+    "standard": "^16.0.3"
+  },
+  "standard": {
+    "globals": [
+      "PIXI"
+    ],
+    "ignore": [
+      "game/libs/"
+    ]
+  }
+}
