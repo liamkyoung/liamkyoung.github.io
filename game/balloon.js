@@ -1,7 +1,7 @@
 'use strict'
 
 function Balloon (x, y, height, width) {
-  this.sprite = new PIXI.Sprite.from('game/res/balloon.png')
+  this.sprite = new PIXI.Sprite.from('game/public/balloon.png')
   this.sprite.x = x
   this.sprite.y = y
   this.down = true

@@ -8,7 +8,7 @@ function Player () {
   // this.playerStationaryTextures = PIXI.Loader.shared.resources['res/spritesheet.json'].spritesheet.animations.player_stationary
   // this.playerWalkingTextures = PIXI.Loader.shared.resources['res/spritesheet.json'].spritesheet.animations.player_walking
 
-  this.sprite = new PIXI.Sprite.from('game/res/red.png')
+  this.sprite = new PIXI.Sprite.from('game/public/red.png')
   this.sprite.width = 100
   this.sprite.height = 200
   this.sprite.x = screen.width / 2
