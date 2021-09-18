@@ -10,9 +10,9 @@ function Balloon (x, y, height, width) {
   // this.sprite.collisionRadius = size / 2
   this.health = 100
 
-  this.basicText = new PIXI.Text(`Balloon Health: ${this.health}`)
-  this.basicText.x = 50
-  this.basicText.y = 50
+  this.basicText = new PIXI.Text(`Balloon Health: ${this.health}`, { fontFamily: 'Calibri', fontSize: 24, fill: 0x00ff00, align: 'center' })
+  this.basicText.x = screen.width - 200
+  this.basicText.y = 100
 }
 
 Balloon.prototype.add = function (stage) {
@@ -37,7 +37,7 @@ Balloon.prototype.loop = function (renderer) {
     }
     this.sprite.y += dy
   } else if (!this.down) {
-    if (this.sprite.y < -200) {
+    if (this.sprite.y < -500) {
       this.down = true
     }
     this.sprite.y += -dy

@@ -9,8 +9,8 @@ function Player () {
   // this.playerWalkingTextures = PIXI.Loader.shared.resources['res/spritesheet.json'].spritesheet.animations.player_walking
 
   this.sprite = new PIXI.Sprite.from('res/red.png')
-  this.sprite.width = 50
-  this.sprite.height = 100
+  this.sprite.width = 100
+  this.sprite.height = 200
   this.sprite.x = screen.width / 2
   this.sprite.y = screen.height - 200
   // his.sprite.colRadius = 40
