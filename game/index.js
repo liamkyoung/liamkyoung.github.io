@@ -1,16 +1,17 @@
 'use strict'
 
 import PlayState from './gameStates/PlayState.js'
+import EndState from './gameStates/EndState.js'
 
 // Determine if the web browser supports WebGL
 let type = 'WebGL'
 if (!PIXI.utils.isWebGLSupported()) {
   type = 'Canvas'
 }
+
 PIXI.utils.sayHello(type)
 
-// Global Variables
-let balloonHealth = 100
+window.complete = -1
 
 // Set up the PIXI app and add it to the html document as a Canvas
 const app = new PIXI.Application({ width: window.innerWidth, height: window.innerHeight, antialias: true })
@@ -26,13 +27,21 @@ PIXI.Loader.shared.load()
 
 function start () {
   const playState = new PlayState()
+  const endState = new EndState()
 
-  playState.add(app.stage)
+  playState.add(app.stage, complete)
 
   app.ticker.add(delta => gameLoop(delta))
 
   // Game Loop
   function gameLoop (delta) {
-    playState.loop(app.renderer)
+    console.log(window.complete)
+    if (window.complete == -1) {
+      playState.loop(app.renderer)
+    } else if (window.complete == 1) {
+      endState.add(app.stage, true)
+    } else if (window.complete == 0) {
+      endState.add(app.stage, false)
+    }
   }
 }

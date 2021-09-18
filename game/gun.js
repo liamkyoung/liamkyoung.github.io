@@ -28,6 +28,8 @@ Gun.prototype.loop = function () {
     this.bullets[b].sprite.x += Math.cos(this.bullets[b].sprite.rotation) * this.bulletSpeed
     this.bullets[b].sprite.y += Math.sin(this.bullets[b].sprite.rotation) * this.bulletSpeed
   }
+
+  // Check for collisions
 }
 
 export default Gun
